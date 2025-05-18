@@ -1,0 +1,97 @@
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Background Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center center; /* Ensures the video is centered */
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="SMALL.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <h1 id="count">GET READY ?</h1>
+  </div>
+
+  <script>
+    setTimeout(()=>{
+    document.getElementById("count").innerHTML=10
+        setTimeout(()=>{
+            document.getElementById("count").innerHTML=9
+            setTimeout(()=>{
+                document.getElementById("count").innerHTML=8
+                setTimeout(()=>{
+                   document.getElementById("count").innerHTML=7
+                   setTimeout(()=>{
+                    document.getElementById("count").innerHTML=6
+        document.getElementById("count").innerHTML=5
+        setTimeout(()=>{
+            document.getElementById("count").innerHTML=4
+            setTimeout(()=>{
+                document.getElementById("count").innerHTML=3
+                setTimeout(()=>{
+                   document.getElementById("count").innerHTML=2
+                   setTimeout(()=>{
+                    document.getElementById("count").innerHTML=1
+                    setTimeout(()=>{
+                        document.getElementById("count").innerHTML="HAPPY INDEPENDENCE"
+
+                    },1000)
+                   },1000)
+                },1000)
+            },1000)
+        },1000)
+        },1000)
+                   },1000)
+                },1000)
+            },1000)
+        },1000)
+  </script>
+
+</body>
+</html>
